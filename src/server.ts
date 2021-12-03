@@ -1,4 +1,4 @@
-import express, { request, response } from 'express';
+import { request, response } from 'express';
 
 import { router } from './routes';
 
