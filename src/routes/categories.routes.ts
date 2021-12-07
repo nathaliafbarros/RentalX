@@ -1,6 +1,5 @@
-import { request, response, Router } from 'express';
+import { Router } from 'express';
 // import { v4 as uuidV4 } from 'uuid'; // { v4 } sobrescrevi o nome para uuidV4.
-
 // import { PostgresCategoriesRepository } from '../modules/cars/repositories/PostgresCategoriesRepository';
 
 // Importando o Multer
@@ -11,14 +10,15 @@ import { importCategoryController } from '../modules/cars/useCases/importCategor
 import { listCategoriesController } from '../modules/cars/useCases/listCategories';
 
 // Instanciando o Router, para ter acesso às suas funções
-const categoriesRoutes = Router({
+const categoriesRoutes = Router();
+
+// Instanciando o Multer, para ter acesso às suas funções e tbm passando algumas configurações
+const upload = multer({
     dest: './tmp',
 });
 
-// Instanciando o Multer, para ter acesso às suas funções e tbm passando algumas configurações
-const upload = multer();
-// Pegando o arquivo e salvando dentro de uma pasta temporária(dest: './tmp') para fazer a leitura dos dados e depois é
-// a deleção dessa pasta temporária.
+// Pegando o arquivo e salvando dentro de uma pasta temporária(dest: './tmp') para fazer a leitura dos dados
+// e depois fazer a deleção dessa pasta temporária.
 
 // const categoriesRepository = new PostgresCategoriesRepository();
 // const categoriesRepository = new CategoriesRepository();
