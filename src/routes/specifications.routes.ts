@@ -1,4 +1,4 @@
-import { request, response, Router } from 'express';
+import { Router } from 'express';
 
 import { createSpecificationController } from '../modules/cars/useCases/createSpecification';
 

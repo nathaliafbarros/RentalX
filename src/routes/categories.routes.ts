@@ -32,6 +32,7 @@ const upload = multer({
 // A rota chama o repositório, e o repositório é que fará a manipulação dos dados com o banco.
 
 // Passei o /categories para o server, para definir um path base
+
 categoriesRoutes.post('/', (request, response) => {
     // A UNICA RESPONSABILIDADE DA ROTA É RECEBER O REQUEST E REPASSAR
     // Não é pra ficar chamando o service.

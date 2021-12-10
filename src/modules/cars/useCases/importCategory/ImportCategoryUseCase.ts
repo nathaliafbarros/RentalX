@@ -35,6 +35,8 @@ class ImportCategoryUseCase {
                     categories.push({ name, description });
                 })
                 .on('end', () => {
+                    // unlink remove o arquivo. Passando o arquivo (file) e o diretório dele (path)
+                    fs.promises.unlink(file.path);
                     // Função callback
                     // Quando finalizar o parse/leitura desse arquivo, eu quero que coloque dentro da promisse
                     // o "categories"
