@@ -1,7 +1,6 @@
 import { Router } from 'express';
 // import { v4 as uuidV4 } from 'uuid'; // { v4 } sobrescrevi o nome para uuidV4.
 // import { PostgresCategoriesRepository } from '../modules/cars/repositories/PostgresCategoriesRepository';
-
 // Importando o Multer
 import multer from 'multer';
 
