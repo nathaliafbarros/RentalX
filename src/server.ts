@@ -6,6 +6,9 @@ import { router } from './routes';
 // importando o arquivo swagger.json
 import swaggerFile from './swagger.json';
 
+// importando o arquivo index.ts do database
+import './database';
+
 const app = express();
 
 app.use(express.json());

@@ -1,4 +1,4 @@
-import { Category } from '../../model/Category';
+import { Category } from '../../entities/Category';
 import {
     ICategoriesRepository,
     ICreateCategoryDTO,
@@ -9,7 +9,7 @@ class CategoriesRepository implements ICategoriesRepository {
     private categories: Category[]; // const categories: Category[] = [];  O "const" só faria sentido dentro de um método, e não como atributo. Aqui é preciso definir seu nível de acesso.
 
     // Usando o padrão de projeto singleton
-    // Criando um atributo/variável para a Instância global
+    // Criando um atributo/variável para uma Instância global
     private static INSTANCE: CategoriesRepository;
     // Vou criar esse construtor para inicializar o atributo/variável categories.
     // Tornar o construtor como private, faz com que ele só possa ser acessado aqui dentro dessa classe
