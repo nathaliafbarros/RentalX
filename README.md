@@ -55,19 +55,20 @@ http://localhost:3333/api-docs/
 ## 🚀 Como rodar a aplicação/testes   
 
 # Clone este repositório
-$ git clone <https://github.com/tgmarinho/nlw1>
+$ git clone <https://github.com/nathaliafbarros/RentalX>
 
-# Acesse a pasta do projeto no terminal/cmd
-$ cd nlw1
-
-# Vá para a pasta server
-$ cd server
+# Navegue até a pasta do projeto
+$ cd rentalx
 
 # Instale as dependências
-$ npm install
+$ yarn install
 
 # Execute a aplicação em modo de desenvolvimento
-$ npm run dev:server
+$ docker-compose up -d
+
+Para rodar os testes
+-> yarn test
+
 
 # O servidor inciará na porta:3333 - acesse <http://localhost:3333>
 
