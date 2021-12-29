@@ -22,14 +22,12 @@
 ## Índice
 <!--ts-->
    * [Sobre](#sobre)
-   * [Status e melhorias](##status-e-melhorias)
+   * [Status e melhorias](#status-e-melhorias)
    * [Features](#features)
-   * [Como usar](#como-usar)
-      * [Pre Requisitos](#pre-requisitos)
-      * [Local files](#local-files)
-      * [Remote files](#remote-files)
-      * [Multiple files](#multiple-files)
-      * [Combo](#combo)
+   * [Para acessar a documentação](#para-acessar-a-documentacao)   
+   * [Como rodar a aplicação/testes](#como-rodar-a-aplicacao/testes)
+   * [Tecnologias utilizadas](#tecnologias-utilizadas)
+
    * [Tests](#testes)
    * [Tecnologias](#tecnologias)
 <!--te-->
@@ -43,18 +41,18 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 ## Features
 
-- [ ] Cadastro de usuários
 - [x] Cadastro de categorias
 - [x] Cadastro de especificações
+- [ ] Cadastro de usuários
 
-## Demonstração da aplicação
+<!--## Demonstração da aplicação-->
+<!--Se for um projeto web e estiver hospedado em algum lugar, forneça o link. Coloque também os prints da tela ou um gif ilustrando a utilização.--> 
+<!--Se for uma API backend pode customizar um badge com um ícone do heroku.-->
 
-Se for um projeto web e estiver hospedado em algum lugar, forneça o link. Se o deploy foi feito no Netlify tem um badge para isso.
-Se for uma API backend pode customizar um badge com um ícone do heroku. Pode também colocar o arquivo do Insomnia para ficar mais rápido para o usuário testar a API — Fica muito bom.
-Se a aplicação estiver em desenvolvimento, se for um app mobile ou website coloque os prints da tela ou um gif ilustrando a utilização.
+## Para acessar a documentação
+http://localhost:3333/api-docs/
 
 ## 🚀 Como rodar a aplicação/testes   
-
 
 # Clone este repositório
 $ git clone <https://github.com/tgmarinho/nlw1>
@@ -152,4 +150,4 @@ Feito com ❤️ por Thiago Marinho 👋🏽 Entre em contato!
 [![Twitter Badge](https://img.shields.io/badge/-@tgmarinho-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/tgmarinho)](https://twitter.com/tgmarinho) [![Linkedin Badge](https://img.shields.io/badge/-Thiago-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/tgmarinho/)](https://www.linkedin.com/in/tgmarinho/) 
 [![Gmail Badge](https://img.shields.io/badge/-tgmarinho@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:tgmarinho@gmail.com)](mailto:tgmarinho@gmail.com)
  
-Para acessar a documentação: http://localhost:3333/api-docs/
+
