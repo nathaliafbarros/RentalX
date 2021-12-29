@@ -29,7 +29,7 @@ class CreateCategoryUseCase {
     */
     constructor(private categoriesRepository: ICategoriesRepository) {}
 
-    execute({ name, description }: IRequest): void {
+    async execute({ name, description }: IRequest): Promise<void> {
         // Para trazer os valores/atributos da nossa rota/request.body usamos o conceito DTO, para transferir dados entre classes/camadas
 
         /* Inverti usando o DIP - Dependency Inversion Principle. Ao invés do service ter que acessar o repositório criando um array, essa responsabilidade será agora de quem chamar o service, que é o route
@@ -39,7 +39,7 @@ class CreateCategoryUseCase {
         */
         // Testando se já existe o mesmo nome de categoria. Se não existir, a categoria será criada.
         const categoryAlreadyExists =
-            this.categoriesRepository.findByName(name);
+            await this.categoriesRepository.findByName(name);
         if (categoryAlreadyExists) {
             throw new Error('Category already exists');
         }

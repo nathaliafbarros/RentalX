@@ -17,7 +17,8 @@ class Category {
     @Column()
     description: string;
 
-    // O typeorm já tem uma notation para usar como create de data
+    // O typeorm já tem uma notation para usar como create de data.
+    // Então a responsabilidade de criar uma data agora é do banco de dados
     @CreateDateColumn()
     created_at: Date;
 

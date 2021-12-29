@@ -2,15 +2,20 @@ import { CategoriesRepository } from '../../repositories/implementations/Categor
 import { CreateCategoryController } from './CreateCategoryController';
 import { CreateCategoryUseCase } from './CreateCategoryUseCase';
 
-// Por último o Usecase que depende do repositório
-const categoriesRepository = CategoriesRepository.getInstance();
+// Transformando isso tudo numa função para que ...?
+export default (): CreateCategoryController => {
+    // Por último o Usecase que depende do repositório
+    const categoriesRepository = new CategoriesRepository();
 
-// Depois o Controller que depende do UseCase
-const createCategoryUseCase = new CreateCategoryUseCase(categoriesRepository);
+    // Depois o Controller que depende do UseCase
+    const createCategoryUseCase = new CreateCategoryUseCase(
+        categoriesRepository,
+    );
 
-// Primeiro a rota: que depende do Controller
-const createCategoryController = new CreateCategoryController(
-    createCategoryUseCase,
-);
+    // Primeiro a rota: que depende do Controller
+    const createCategoryController = new CreateCategoryController(
+        createCategoryUseCase,
+    );
 
-export { createCategoryController, createCategoryUseCase };
+    return createCategoryController;
+};

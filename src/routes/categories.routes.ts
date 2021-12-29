@@ -4,7 +4,8 @@ import { Router } from 'express';
 // Importando o Multer
 import multer from 'multer';
 
-import { createCategoryController } from '../modules/cars/useCases/createCategory';
+import createCategoryController from '../modules/cars/useCases/createCategory';
+// Como agora ele é um export default, podemos tirar as {}
 import { importCategoryController } from '../modules/cars/useCases/importCategory';
 import { listCategoriesController } from '../modules/cars/useCases/listCategories';
 
@@ -86,7 +87,7 @@ categoriesRoutes.post('/', (request, response) => {
     return response.status(201).send();
     */
     // Receber o Controller
-    return createCategoryController.handle(request, response);
+    return createCategoryController().handle(request, response);
 });
 
 categoriesRoutes.get('/', (request, response) => {
