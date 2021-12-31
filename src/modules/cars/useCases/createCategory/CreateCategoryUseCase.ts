@@ -1,5 +1,7 @@
 // Meu antigo Service CreateCategoryService.ts
 
+import { inject, injectable } from 'tsyringe';
+
 import { ICategoriesRepository } from '../../repositories/ICategoriesRepository';
 
 // DTO - Para trazer os valores/atributos da nossa rota/request.body usamos o conceito DTO, para transferir dados entre classes/camadas
@@ -14,7 +16,7 @@ interface IRequest {
  * [x] - Alterar o retorno de erro: Mudar para throw new Error()
  * [x] - Acessar o repositório: Usamps o DIP para criar/acessar o array categories = []
  */
-
+@injectable()
 class CreateCategoryUseCase {
     // Passando para cá a responsabilidade de acessar o repositório, puxando a classe CategoriesRepository.
     // Do jeito que o código está, esse service está diretamente dependente da classe CategoriesRepository.
@@ -27,7 +29,10 @@ class CreateCategoryUseCase {
         this.categoriesRepository = categoriesRepository;
     }
     */
-    constructor(private categoriesRepository: ICategoriesRepository) {}
+    constructor(
+        @inject('CategoriesRepository')
+        private categoriesRepository: ICategoriesRepository,
+    ) {}
 
     async execute({ name, description }: IRequest): Promise<void> {
         // Para trazer os valores/atributos da nossa rota/request.body usamos o conceito DTO, para transferir dados entre classes/camadas

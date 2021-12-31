@@ -4,7 +4,8 @@ import { Router } from 'express';
 // Importando o Multer
 import multer from 'multer';
 
-import createCategoryController from '../modules/cars/useCases/createCategory';
+import { CreateCategoryController } from '../modules/cars/useCases/createCategory/CreateCategoryController';
+// import createCategoryController from '../modules/cars/useCases/createCategory';
 // Como agora ele é um export default, podemos tirar as {}
 import { importCategoryController } from '../modules/cars/useCases/importCategory';
 import { listCategoriesController } from '../modules/cars/useCases/listCategories';
@@ -16,13 +17,14 @@ const categoriesRoutes = Router();
 const upload = multer({
     dest: './tmp',
 });
-
 // Pegando o arquivo e salvando dentro de uma pasta temporária(dest: './tmp') para fazer a leitura dos dados
 // e depois fazer a deleção dessa pasta temporária.
 
 // const categoriesRepository = new PostgresCategoriesRepository();
 // const categoriesRepository = new CategoriesRepository();
 // Qualquer das duas Classes/implementações vai funcionar
+
+const createCategoryController = new CreateCategoryController();
 
 // Passei essa responsabilidade para repositorie
 // const categories: Category[] = []; // const categories = []; chamando a classe e com isso definindo que o modelo dessa classe que será seguido.
@@ -33,13 +35,14 @@ const upload = multer({
 
 // Passei o /categories para o server, para definir um path base
 
-categoriesRoutes.post('/', (request, response) => {
-    // A UNICA RESPONSABILIDADE DA ROTA É RECEBER O REQUEST E REPASSAR
-    // Não é pra ficar chamando o service.
-    // Tudo isso, vai ficar dentro de Controllers
-    // Foi pra Controller:
-    // const { name, description } = request.body;
-    /* Passei essa responsabilidade para o services
+// categoriesRoutes.post('/', (request, response) => {
+categoriesRoutes.post('/', createCategoryController.handle);
+// A UNICA RESPONSABILIDADE DA ROTA É RECEBER O REQUEST E REPASSAR
+// Não é pra ficar chamando o service.
+// Tudo isso, vai ficar dentro de Controllers
+// Foi pra Controller:
+// const { name, description } = request.body;
+/* Passei essa responsabilidade para o services
     const categoryAlreadyExists = categoriesRepository.findByName(name);
     if (categoryAlreadyExists) {
         return response.status(400).json({ error: 'Category already exists' });
@@ -47,7 +50,7 @@ categoriesRoutes.post('/', (request, response) => {
 
     categoriesRepository.create({ name, description });
     */
-    /* Isso tudo aqui é pra acessar o "banco", então será de responsabilidade do repositório.
+/* Isso tudo aqui é pra acessar o "banco", então será de responsabilidade do repositório.
     const category = new Category(); // Instanciei a classe Category, para que seja chamado o construtor,
     // já que o construtor sempre é chamado quando a classe for instanciada.
     // Assim eu consigo trazer de volta o atributo id para meu objeto.
@@ -61,7 +64,7 @@ categoriesRoutes.post('/', (request, response) => {
         created_at: new Date(),
     });
     */
-    /*
+/*
      Estava assim:
         // const category: Category = {
         // Aqui ele estaria reclamando que o atributo id não está aqui conforme
@@ -76,9 +79,9 @@ categoriesRoutes.post('/', (request, response) => {
         }; 
     categories.push(category);
     */
-    // Chamando o service para verificar se já existe esse mesmo nome de categoria e por fim executar o service e criar a categoria
-    // Foi pra Controller:
-    /*
+// Chamando o service para verificar se já existe esse mesmo nome de categoria e por fim executar o service e criar a categoria
+// Foi pra Controller:
+/*
     const createCategoryService = new CreateCategoryService(
         categoriesRepository,
     );
@@ -86,9 +89,8 @@ categoriesRoutes.post('/', (request, response) => {
 
     return response.status(201).send();
     */
-    // Receber o Controller
-    return createCategoryController().handle(request, response);
-});
+// Receber o Controller
+// return createCategoryController().handle(request, response);
 
 categoriesRoutes.get('/', (request, response) => {
     return listCategoriesController.handle(request, response);

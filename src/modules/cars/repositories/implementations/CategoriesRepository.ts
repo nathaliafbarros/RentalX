@@ -14,6 +14,8 @@ class CategoriesRepository implements ICategoriesRepository {
     // Defini como private essa variável/atributo, assim eu só consigo acessar ela aqui dentro dessa classe
 
     // Usando o padrão de projeto singleton
+    // Pois toda vez que é criada uma instância do repositório, é criado um novo array
+    // Fazendo com que percamos os dados do nosso repositório fake
     // Criando um atributo/variável para uma Instância global
     // private static INSTANCE: CategoriesRepository;
 

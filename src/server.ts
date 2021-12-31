@@ -9,6 +9,10 @@ import swaggerFile from './swagger.json';
 // importando o arquivo index.ts do database
 import './database';
 
+import './shared/container';
+
+import 'reflect-metadata';
+
 const app = express();
 
 app.use(express.json());
