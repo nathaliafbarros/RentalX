@@ -1,7 +1,5 @@
 # RENTALX
 
-<!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
-
 ![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
@@ -18,20 +16,18 @@
 <!-- com markdown:
 ![Thiago Marinho](https://pbs.twimg.com/profile_banners/41742474/1490016588/1500x500)
 -->
-
+## Sobre
 > Backend de uma aplicação de aluguel de carros
 
 ## Índice
 <!--ts-->
-   * [Sobre](#Sobre)
-   * [Tabela de Conteudo](#tabela-de-conteudo)
-   * [Instalação](#instalacao)
-   * [Como usar](#como-usar)
-      * [Pre Requisitos](#pre-requisitos)
-      * [Local files](#local-files)
-      * [Remote files](#remote-files)
-      * [Multiple files](#multiple-files)
-      * [Combo](#combo)
+   * [Sobre](#sobre)
+   * [Status e melhorias](#status-e-melhorias)
+   * [Features](#features)
+   * [Para acessar a documentação](#para-acessar-a-documentacao)   
+   * [Como rodar a aplicação/testes](#como-rodar-a-aplicacao/testes)
+   * [Tecnologias utilizadas](#tecnologias-utilizadas)
+
    * [Tests](#testes)
    * [Tecnologias](#tecnologias)
 <!--te-->
@@ -45,47 +41,47 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 ## Features
 
-- [ ] Cadastro de usuários
 - [x] Cadastro de categorias
 - [x] Cadastro de especificações
+- [ ] Cadastro de usuários
 
-## Demonstração da aplicação
+<!--## Demonstração da aplicação-->
+<!--Se for um projeto web e estiver hospedado em algum lugar, forneça o link. Coloque também os prints da tela ou um gif ilustrando a utilização.--> 
+<!--Se for uma API backend pode customizar um badge com um ícone do heroku.-->
 
-Se for um projeto web e estiver hospedado em algum lugar, forneça o link. Se o deploy foi feito no Netlify tem um badge para isso.
-Se for uma API backend pode customizar um badge com um ícone do heroku. Pode também colocar o arquivo do Insomnia para ficar mais rápido para o usuário testar a API — Fica muito bom.
-Se a aplicação estiver em desenvolvimento, se for um app mobile ou website coloque os prints da tela ou um gif ilustrando a utilização.
+## Para acessar a documentação
+http://localhost:3333/api-docs/
 
-## 🚀 Como rodar a aplicação/testes  🎲 Rodando o Back End (servidor)
-se for um projeto backend | web | mobile | desktop descreva os passos de como fazer para rodar na máquina.
+## 🚀 Como rodar a aplicação/testes   
 
 # Clone este repositório
-$ git clone <https://github.com/tgmarinho/nlw1>
+$ git clone <https://github.com/nathaliafbarros/RentalX>
 
-# Acesse a pasta do projeto no terminal/cmd
-$ cd nlw1
-
-# Vá para a pasta server
-$ cd server
+# Navegue até a pasta do projeto
+$ cd rentalx
 
 # Instale as dependências
-$ npm install
+$ yarn install
 
 # Execute a aplicação em modo de desenvolvimento
-$ npm run dev:server
+$ docker-compose up -d
+
+Para rodar os testes
+-> yarn test
+
 
 # O servidor inciará na porta:3333 - acesse <http://localhost:3333>
 
-## ☕ Usando <nome_do_projeto>
+## 🛠 Tecnologias utilizadas
 
-Para usar <nome_do_projeto>, siga estas etapas:
+As seguintes ferramentas foram usadas na construção do projeto:
+- [Expo](https://expo.io/)
+- [Node.js](https://nodejs.org/en/)
+- [React](https://pt-br.reactjs.org/)
+- [React Native](https://reactnative.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-```
-<exemplo_de_uso>
-```
-
-Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Fornece uma referência de opções para pontos de bônus!
-
-## 📫 Contribuindo para <nome_do_projeto>
+## 📫 Contribuição
 <!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
 Para contribuir com <nome_do_projeto>, siga estas etapas:
 
@@ -137,10 +133,22 @@ Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contr
 
 ## 📝 Licença
 
-Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
+Esse projeto está sob licença MIT. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 
 [⬆ Voltar ao topo](#nome-do-projeto)<br>
 
-Aplicação criada durante a trilha Node.js - Rocketseat
+## Autor
+---
+
+<a href="https://blog.rocketseat.com.br/author/thiago/">
+ <img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/380327?s=460&u=61b426b901b8fe02e12019b1fdb67bf0072d4f00&v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Thiago Marinho</b></sub></a> <a href="https://blog.rocketseat.com.br/author/thiago//" title="Rocketseat">🚀</a>
+
+
+Feito com ❤️ por Thiago Marinho 👋🏽 Entre em contato!
+
+[![Twitter Badge](https://img.shields.io/badge/-@tgmarinho-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/tgmarinho)](https://twitter.com/tgmarinho) [![Linkedin Badge](https://img.shields.io/badge/-Thiago-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/tgmarinho/)](https://www.linkedin.com/in/tgmarinho/) 
+[![Gmail Badge](https://img.shields.io/badge/-tgmarinho@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:tgmarinho@gmail.com)](mailto:tgmarinho@gmail.com)
  
-Para acessar a documentação: http://localhost:3333/api-docs/
+
