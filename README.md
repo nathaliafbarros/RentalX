@@ -25,10 +25,10 @@
    * [Status e melhorias](#status-e-melhorias)
    * [Features](#features)
    * [Para acessar a documentação](#para-acessar-a-documentação)   
-   * [Como rodar a aplicação/testes](#como-rodar-a-aplicacao/testes)
+   * [Como rodar a aplicação/testes](#como-rodar-a-aplicação/testes)
    * [Tecnologias utilizadas](#tecnologias-utilizadas)
-   * [Contribuição](#contribuicao)
-   * [Licença](#licenca)
+   * [Contribuição](#contribuição)
+   * [Licença](#licença)
    * [Autor](#autor)
 <!--te-->
 
@@ -52,7 +52,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 ## Para acessar a documentação
 http://localhost:3333/api-docs/
 
-## 🚀 Como rodar a aplicação/testes   
+## Como rodar a aplicação/testes   
 
 ### Clone este repositório
 $ git clone <https://github.com/nathaliafbarros/RentalX>
@@ -63,15 +63,15 @@ $ cd rentalx
 ### Instale as dependências
 $ yarn install
 
-# Execute a aplicação em modo de desenvolvimento
+### Execute a aplicação em modo de desenvolvimento
 $ docker-compose up -d
 
-Para rodar os testes
+### Para rodar os testes
 $ yarn test
 
-# O servidor inciará na porta:3333 - acesse <http://localhost:3333>
+O servidor inciará na porta:3333 - acesse <http://localhost:3333>
 
-## 🛠 Tecnologias utilizadas
+## Tecnologias utilizadas
 
 As seguintes ferramentas foram usadas na construção do projeto:
 - [Node.js](https://nodejs.org/en/)
@@ -79,7 +79,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Express](https://expressjs.com/pt-br/)
 - [TypeORM](https://typeorm.io/#/)
 
-## 📫 Contribuição
+## Contribuição
 <!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
 Para contribuir com esse projeto, siga estas etapas:
 
@@ -91,7 +91,7 @@ Para contribuir com esse projeto, siga estas etapas:
 
 Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-## 📝 Licença
+## Licença
 
 Esse projeto está sob licença MIT. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 
