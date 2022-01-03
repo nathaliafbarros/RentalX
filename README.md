@@ -97,8 +97,8 @@ Esse projeto está sob licença MIT. Veja o arquivo [LICENÇA](LICENSE.md) para 
 
 ## Autor
 Feito com ❤️ por Nathália Barros 
-👋🏽 Entre em contato!
-[![Linkedin Badge](https://img.shields.io/badge/-Nathália-Barros-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/nathaliafbarros/)](https://www.linkedin.com/in/nathaliafbarros/) 
+👋🏽 Entre em contato!<br>
+[![Linkedin Badge](https://img.shields.io/badge/-Nathália-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/nathaliafbarros/)](https://www.linkedin.com/in/nathaliafbarros/) 
 [![Gmail Badge](https://img.shields.io/badge/-nathynanda@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:nathynanda@gmail.com)](mailto:nathynanda@gmail.com)
  
 [⬆ Voltar ao topo](#rentalx)<br>
