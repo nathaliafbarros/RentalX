@@ -25,7 +25,7 @@
    * [Status e melhorias](#status-e-melhorias)
    * [Features](#features)
    * [Para acessar a documentação](#para-acessar-a-documentação)   
-   * [Como rodar a aplicação e testes](#como-rodar-a-aplicação-e-testes)
+   * [Como rodar a aplicação](#como-rodar-a-aplicação)
    * [Tecnologias utilizadas](#tecnologias-utilizadas)
    * [Contribuição](#contribuição)
    * [Licença](#licença)
