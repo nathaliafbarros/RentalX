@@ -25,7 +25,7 @@
    * [Status e melhorias](#status-e-melhorias)
    * [Features](#features)
    * [Para acessar a documentação](#para-acessar-a-documentação)   
-   * [Como rodar a aplicação/testes](#como-rodar-a-aplicação/testes)
+   * [Como rodar a aplicação e testes](#como-rodar-a-aplicação-e-testes)
    * [Tecnologias utilizadas](#tecnologias-utilizadas)
    * [Contribuição](#contribuição)
    * [Licença](#licença)
@@ -52,7 +52,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 ## Para acessar a documentação
 http://localhost:3333/api-docs/
 
-## Como rodar a aplicação/testes   
+## Como rodar a aplicação e testes
 
 ### Clone este repositório
 $ git clone <https://github.com/nathaliafbarros/RentalX>
