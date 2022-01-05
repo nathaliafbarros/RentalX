@@ -36,7 +36,7 @@
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-- [ ] Banco de dados - Postgresql
+- [x] Banco de dados - Postgresql
 - [ ] Testes automatizados
 
 ## Features
