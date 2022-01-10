@@ -17,6 +17,7 @@ interface IRequest {
  * [x] - Acessar o repositório: Usamps o DIP para criar/acessar o array categories = []
  */
 @injectable()
+// Tornando essa classe aqui CreateCategoryUseCase disponível para ser injetada lá no controller
 class CreateCategoryUseCase {
     // Passando para cá a responsabilidade de acessar o repositório, puxando a classe CategoriesRepository.
     // Do jeito que o código está, esse service está diretamente dependente da classe CategoriesRepository.
@@ -30,9 +31,13 @@ class CreateCategoryUseCase {
     }
     */
     constructor(
+        // Definindo o nome da classe que será chamada
         @inject('CategoriesRepository')
         private categoriesRepository: ICategoriesRepository,
     ) {}
+    // Então toda vez que eu tiver uma injeção como essa acima. ele vai lá no index do shared
+    // e vai procurar pelo nome desse container que demos aqui: 'CategoriesRepository'
+    // e daí vai ver que tá chamando a classe CategoriesRepository
 
     async execute({ name, description }: IRequest): Promise<void> {
         // Para trazer os valores/atributos da nossa rota/request.body usamos o conceito DTO, para transferir dados entre classes/camadas

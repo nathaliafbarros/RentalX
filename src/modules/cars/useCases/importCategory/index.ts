@@ -1,4 +1,4 @@
-import { CategoriesRepository } from '../../repositories/implementations/CategoriesRepository';
+/* import { CategoriesRepository } from '../../repositories/implementations/CategoriesRepository';
 import { ImportCategoryController } from './ImportCategoryController';
 import { ImportCategoryUseCase } from './ImportCategoryUseCase';
 
@@ -11,3 +11,4 @@ const importCategoryController = new ImportCategoryController(
 );
 
 export { importCategoryController };
+ */

@@ -1,19 +1,20 @@
 import { Request, Response } from 'express';
+import { container } from 'tsyringe';
 
 import { ImportCategoryUseCase } from './ImportCategoryUseCase';
 
 class ImportCategoryController {
-    constructor(private importCategoryUseCase: ImportCategoryUseCase) {}
-
-    handle(request: Request, response: Response): Response {
+    async handle(request: Request, response: Response): Promise<Response> {
         const { file } = request; // Passando o mouse aqui em cima, ele me diz o tipo do arquivo: Express.Multer.File
         // Vou colocar lá no UseCase
+
+        const importCategoryUseCase = container.resolve(ImportCategoryUseCase);
 
         if (!file) {
             return response.status(201).send('File not sent');
         }
 
-        this.importCategoryUseCase.execute(file);
+        await importCategoryUseCase.execute(file);
         return response.status(201).send();
     }
 }

@@ -1,6 +1,6 @@
 import { Category } from '../entities/Category';
 
-// DTO - Para trazer os valores/atributos da nossa rota/request.body usamos o conceito DTO, para transferir dados entre classes/camadas
+// DTO - Para trazer os valores/atributos da recebidos na nossa rota/request.body usamos o conceito DTO, para transferir dados entre classes/camadas
 interface ICreateCategoryDTO {
     name: string;
     description: string;

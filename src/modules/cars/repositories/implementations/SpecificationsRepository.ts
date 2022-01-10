@@ -1,3 +1,5 @@
+import { getRepository, Repository } from 'typeorm';
+
 import { Specification } from '../../entities/Specification';
 import {
     ISpecificationsRepository,
@@ -6,31 +8,31 @@ import {
 
 class SpecificationsRepository implements ISpecificationsRepository {
     // criando o repositório/array fake
-    private specifications: Specification[];
+    // private specifications: Specification[];
+
+    private repository: Repository<Specification>;
 
     // Vou criar esse construtor para inicializar o atributo acima
     // Então sempre que essa classe for instanciada, é que o atributo/variável será inicializado
     // Então a responsabilidade de criar o array fake e inicializar esse atributo estará aqui agora.
     constructor() {
-        this.specifications = [];
+        this.repository = getRepository(Specification);
     }
 
-    create({ name, description }: ICreateSpecificationDTO): void {
-        const specification = new Specification();
-
-        // Esse Object.assign pega os dados com os devidos valores que veio do usuário(new Specification) e joga dentro de specification.
-        Object.assign(specification, {
+    async create({
+        name,
+        description,
+    }: ICreateSpecificationDTO): Promise<void> {
+        const specification = this.repository.create({
             name,
             description,
-            created_at: new Date(),
         });
-        this.specifications.push(specification);
+
+        await this.repository.save(specification);
     }
 
-    findByName(name: string): Specification {
-        const specification = this.specifications.find(
-            specification => specification.name === name,
-        );
+    async findByName(name: string): Promise<Specification> {
+        const specification = this.repository.findOne({ name });
         return specification;
     }
 }

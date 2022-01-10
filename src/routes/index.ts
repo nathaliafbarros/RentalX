@@ -1,7 +1,9 @@
 import { Router } from 'express';
 
+import { authenticateRoutes } from './authenticate.route';
 import { categoriesRoutes } from './categories.routes';
 import { specificationsRoutes } from './specifications.routes';
+import { usersRoutes } from './users.routes';
 
 const router = Router();
 
@@ -11,5 +13,8 @@ const router = Router();
 // app.use('/categories', categoriesRoutes);
 router.use('/categories', categoriesRoutes);
 router.use('/specifications', specificationsRoutes);
+router.use('/users', usersRoutes);
+// aqui abaixo, eu quero somente o /
+router.use(authenticateRoutes);
 
 export { router };

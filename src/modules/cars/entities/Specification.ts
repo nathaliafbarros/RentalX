@@ -1,9 +1,18 @@
+import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm';
 import { v4 as uuidV4 } from 'uuid';
 
+@Entity('specifications')
 class Specification {
+    @PrimaryColumn()
     id?: string;
+
+    @Column()
     name: string;
+
+    @Column()
     description: string;
+
+    @CreateDateColumn()
     created_at: Date;
 
     // Vou criar esse construtor para que se evite criar um id novo ao querer fazer uma edição por exemplo.

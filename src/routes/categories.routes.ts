@@ -7,8 +7,8 @@ import multer from 'multer';
 import { CreateCategoryController } from '../modules/cars/useCases/createCategory/CreateCategoryController';
 // import createCategoryController from '../modules/cars/useCases/createCategory';
 // Como agora ele é um export default, podemos tirar as {}
-import { importCategoryController } from '../modules/cars/useCases/importCategory';
-import { listCategoriesController } from '../modules/cars/useCases/listCategories';
+import { ImportCategoryController } from '../modules/cars/useCases/importCategory/ImportCategoryController';
+import { ListCategoriesController } from '../modules/cars/useCases/listCategories/ListCategoriesController';
 
 // Instanciando o Router, para ter acesso às suas funções
 const categoriesRoutes = Router();
@@ -25,6 +25,8 @@ const upload = multer({
 // Qualquer das duas Classes/implementações vai funcionar
 
 const createCategoryController = new CreateCategoryController();
+const importCategoryController = new ImportCategoryController();
+const listCategoriesController = new ListCategoriesController();
 
 // Passei essa responsabilidade para repositorie
 // const categories: Category[] = []; // const categories = []; chamando a classe e com isso definindo que o modelo dessa classe que será seguido.
@@ -92,13 +94,13 @@ categoriesRoutes.post('/', createCategoryController.handle);
 // Receber o Controller
 // return createCategoryController().handle(request, response);
 
-categoriesRoutes.get('/', (request, response) => {
-    return listCategoriesController.handle(request, response);
-});
+categoriesRoutes.get('/', listCategoriesController.handle);
 
-categoriesRoutes.post('/import', upload.single('file'), (request, response) => {
-    return importCategoryController.handle(request, response);
-});
+categoriesRoutes.post(
+    '/import',
+    upload.single('file'),
+    importCategoryController.handle,
+);
 // upload.single pq é upload de apenas um arquivo e ('file') é o nome que será dado ao arquivo
 
 export { categoriesRoutes };
