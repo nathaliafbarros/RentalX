@@ -42,8 +42,9 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 ## Features
 
 - [x] Cadastro de categorias
+- [x] Upload de categorias (arquivo csv)
 - [x] Cadastro de especificações
-- [ ] Cadastro de usuários
+- [x] Cadastro de usuários
 
 <!--## Demonstração da aplicação-->
 <!--Se for um projeto web e estiver hospedado em algum lugar, forneça o link. Coloque também os prints da tela ou um gif ilustrando a utilização.--> 
@@ -80,6 +81,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [TypeORM](https://typeorm.io/#/)
 - [Docker](https://www.docker.com/)
 - [PostgreSQL](https://www.postgresql.org/)
+- [JWT](https://jwt.io/)
 
 ## Contribuição
 <!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
