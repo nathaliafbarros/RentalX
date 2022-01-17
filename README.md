@@ -36,7 +36,7 @@
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-- [x] Banco de dados - Postgresql
+- [x] Banco de dados - PostgreSQL
 - [ ] Testes automatizados
 
 ## Features
@@ -45,6 +45,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Upload de categorias (arquivo csv)
 - [x] Cadastro de especificações
 - [x] Cadastro de usuários
+- [x] Update de Avatar do usuário
 
 <!--## Demonstração da aplicação-->
 <!--Se for um projeto web e estiver hospedado em algum lugar, forneça o link. Coloque também os prints da tela ou um gif ilustrando a utilização.--> 
@@ -82,6 +83,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Docker](https://www.docker.com/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [JWT](https://jwt.io/)
+- [Jest](https://jestjs.io/pt-BR/)
 
 ## Contribuição
 <!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
