@@ -71,7 +71,7 @@ $ docker-compose up -d
 ### Para rodar os testes
 $ yarn test
 
-O servidor inciará na porta:3333 - acesse <http://localhost:3333>
+O servidor inciará na porta:3333 - acesse <http://localhost:3333/api-docs/>
 
 ## Tecnologias utilizadas
 
